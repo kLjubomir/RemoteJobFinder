@@ -5,8 +5,8 @@
 - [ ] As a remote job seeker, I want to have a filtering tool so that I can filter out non-English ads on LinkedIn
 - [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads, viewing only those that include a keyword
 - [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads, viewing only those that exclude a keyword
-- [ ] As a remote job seeker, I want to have a file generated for ads that have a salary range included
-- [ ] As a remote job seeker, I want to have a file generated for ads that don't include a salary range
+- [ ] As a remote job seeker, I want to store ads that have a salary range included
+- [ ] As a remote job seeker, I want to store ads that don't include a salary range
 
 ## Software behaviour:
 - [ ] As a remote job filtering software, I want to have a login function so that I can log in to job seeking platforms that require it
@@ -69,7 +69,7 @@ When possible, use API to reduce the time complexity of operations
   **Then** the adverts are filtered as non-matching  
 
 &nbsp;  
-- [ ] As a remote job seeker, I want to have a file generated for ads that have a salary range included  
+- [ ] As a remote job seeker, I want to store ads that have a salary range included  
 
 **Scenario: Store advert URL in advertHasSalaryRange.json**  
   **Given** advert description from LinkedIn is fetched  
@@ -80,7 +80,7 @@ When possible, use API to reduce the time complexity of operations
 _salary indicator: words like "per hour," "/h," "€," "$," "eur," "dollar," "annual," "a number between 5 digits separated by dot or comma (utils)," "number between 6 digits separated by dot or comma (utils)"_  
 
 &nbsp;  
-- [ ] As a remote job seeker, I want to have a file generated for ads that don't include a salary range  
+- [ ] As a remote job seeker, I want to store ads that don't include a salary range  
 
 **Scenario: Store advert URL in advertWithoutSalaryRange.json**  
   **Given** advert description from LinkedIn is fetched  
