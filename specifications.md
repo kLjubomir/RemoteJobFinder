@@ -1,6 +1,6 @@
-#Remote Job Finder Software Requirement Specification
+# Remote Job Finder Software Requirement Specification
 
-##Filtering behaviour:
+## Filtering behaviour:
 - [ ] As a remote job seeker I want to have a filtering tool so that I can filter out "on site" adverts from my remote job search
 - [ ] As a remote job seeker I want to have a filtering tool so that I can filter out non english ads on LinkedIn
 - [ ] As a remote job seeker I want to have a filtering tool so that I can filter ads that only include a keyword
@@ -8,13 +8,13 @@
 - [ ] As a remote job seeker I want to have a file generated for ads that have a salary range included
 - [ ] As a remote job seeker I want to have a file generated for ads that don't include a salary range
 
-##Software behaviour:
+## Software behaviour:
 - [ ] As a remote job filtering software I want to have a login function so that I can login to job seeking platforms that require it
 - [ ] As a remote job filtering software I want to navigate to the page that lets me search for jobs so that I can search for jobs
 - [ ] As a remote job filtering software I want to have CLI defined parameters so that I can dynamically adjust the filters: job title, description including, description not including
 
 
-##Chronological Behaviour Driven Development Steps mapped to user stories
+## Chronological Behaviour Driven Development Steps mapped to user stories
 
 When possible use API to reduce the time complexity of operations
 
@@ -64,7 +64,8 @@ When possible use API to reduce the time complexity of operations
   **When** The filters set by end user all return true
   **And** description text includes keywords indicating salary disclosure
   **Then** the advert URLS are stored in advertHasSalaryRange.json
-salary indicator: words like "per hour" "/h" "€" "$" "eur" "dollar" "anual", "a number between 5 digits separated by dot or comma (utils)", "number between 6 digits separated by dot or comma (utils)"
+  
+__salary indicator: words like "per hour" "/h" "€" "$" "eur" "dollar" "anual", "a number between 5 digits separated by dot or comma (utils)", "number between 6 digits separated by dot or comma (utils)"__
 
 - [ ] As a remote job seeker I want to have a file generated for ads that don't include a salary range
 **Scenario: Store advert URL in advertWithoutSalaryRange.json**
