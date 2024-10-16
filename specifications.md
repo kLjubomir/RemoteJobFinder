@@ -3,8 +3,8 @@
 ## Filtering behaviour:
 - [ ] As a remote job seeker, I want to have a filtering tool so that I can filter out "on-site" adverts from my remote job search
 - [ ] As a remote job seeker, I want to have a filtering tool so that I can filter out non-English ads on LinkedIn
-- [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads that only include a keyword
-- [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads that exclude a keyword
+- [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads, viewing only those that include a keyword
+- [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads, viewing only those that exclude a keyword
 - [ ] As a remote job seeker, I want to have a file generated for ads that have a salary range included
 - [ ] As a remote job seeker, I want to have a file generated for ads that don't include a salary range
 
@@ -53,7 +53,7 @@ When possible, use API to reduce the time complexity of operations
   **Then** the adverts are not truly remote adverts.  
 
 &nbsp;  
-- [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads that only include a keyword  
+- [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads, viewing only those that include a keyword  
 
 **Scenario: Include only jobs with keyword in description**  
   **Given** advert description is fetched  
@@ -61,7 +61,7 @@ When possible, use API to reduce the time complexity of operations
   **Then** the adverts are filtered as matching  
 
 &nbsp;  
-- [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads that exclude a keyword  
+- [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads, viewing only those that exclude a keyword  
 
 **Scenario: Exclude jobs with keyword in description**  
   **Given** advert description is fetched  
