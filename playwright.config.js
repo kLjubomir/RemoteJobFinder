@@ -1,6 +1,8 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
-
+const credentials = require('./test_data/credentials.json');
+//const path = require('path');
+//require('dotenv').config({ path: path.resolve(__dirname, '.env') })
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -11,6 +13,7 @@ const { defineConfig, devices } = require('@playwright/test');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
+  timeout: 1500000,
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -28,24 +31,22 @@ module.exports = defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
+      use: {
+        ...devices['Desktop Chrome'],
+        headless: true,
+        viewport: { width: 1920, height: 1080 },
+        credentials: credentials,
+        //use this one if globalsetup fails
+        //keywordIncluded: process.env.KEYWORD_INCLUDED,
+      },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
     },
 
     /* Test against mobile viewports. */
@@ -68,12 +69,6 @@ module.exports = defineConfig({
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
   ],
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://127.0.0.1:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
+  globalSetup: './globalSetup.js'
 });
 

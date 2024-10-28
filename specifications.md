@@ -49,7 +49,7 @@ When possible, use API to reduce the time complexity of operations
 
 **Scenario: Disregard false remote adverts**  
   **Given** advert description is fetched  
-  **When** description text includes words like "on-site", "onsite", "U.S. Citizen," etc.  
+  **When** description text includes words like "on-site", "onsite", "U.S. Citizen", "residence in" etc.  
   **Then** the adverts are not truly remote adverts.  
 
 &nbsp;  
