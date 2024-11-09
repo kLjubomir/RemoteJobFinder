@@ -8,7 +8,7 @@ class LinkedinHomePage {
     }
 
     async navigateToJobs() {
-        await this.jobsNavItem.click();
+        await this.jobsNavItem.last().click();
         await expect(this.page).toHaveURL(/\/jobs\//);
     }
 

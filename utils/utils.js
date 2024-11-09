@@ -6,7 +6,7 @@ class Utils {
         if (result.reliable) {
             const englishLanguage = result.languages.find(lang => lang.name === 'ENGLISH');
 
-            if (englishLanguage && englishLanguage.percent > 70) {
+            if (englishLanguage && englishLanguage.percent > 80) {
                 return true;
             }
         }

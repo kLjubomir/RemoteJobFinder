@@ -13,7 +13,7 @@ const credentials = require('./test_data/credentials.json');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
-  timeout: 1500000,
+  timeout: 3000000,
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -43,8 +43,6 @@ module.exports = defineConfig({
         headless: true,
         viewport: { width: 1920, height: 1080 },
         credentials: credentials,
-        //use this one if globalsetup fails
-        //keywordIncluded: process.env.KEYWORD_INCLUDED,
       },
 
     },

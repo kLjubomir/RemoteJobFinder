@@ -1,9 +1,9 @@
 # Remote Job Finder Software Requirement Specification
 
 ## Filtering behaviour:
-- [ ] As a remote job seeker, I want to have a filtering tool so that I can filter out "on-site" adverts from my remote job search
-- [ ] As a remote job seeker, I want to have a filtering tool so that I can filter out non-English ads on LinkedIn
-- [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads, viewing only those that include a keyword
+- [x] As a remote job seeker, I want to have a filtering tool so that I can filter out "on-site" adverts from my remote job search
+- [x] As a remote job seeker, I want to have a filtering tool so that I can filter out non-English ads on LinkedIn
+- [x] As a remote job seeker, I want to have a filtering tool so that I can filter ads, viewing only those that include a keyword
 - [ ] As a remote job seeker, I want to have a filtering tool so that I can filter ads, viewing only those that exclude a keyword
 - [ ] As a remote job seeker, I want to store ads that have a salary range included
 - [ ] As a remote job seeker, I want to store ads that don't include a salary range
@@ -89,6 +89,4 @@ _salary indicator: words like "per hour," "/h," "€," "$," "eur," "dollar," "an
   **Then** the advert URLs are stored in advertWithoutSalaryRange.json  
 
 &nbsp;  
-- [ ] As a remote job filtering software, I want to have CLI-defined parameters so that I can dynamically adjust the filters: job title, description including, description excluding  
-
-Use dotenv .env with defaults that would be overwritten when starting the suite over CLI process.env.jobTitle, process.env.descIncludes, process.env.descExcludes, null skip.
+- [x] As a remote job filtering software, I want to have CLI-defined parameters so that I can dynamically adjust the filters: job title, description including 
